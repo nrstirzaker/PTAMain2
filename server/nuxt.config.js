@@ -40,7 +40,13 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
+  axios: {
+    proxy: true,
+    baseURL: 'http://localhost:1337'
+  },
   /*
   ** Build configuration
   */
