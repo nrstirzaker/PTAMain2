@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedules",
+  "info": {
+    "name": "Schedules"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "meetings": {
+      "type": "json"
+    },
+    "secondHandUniform": {
+      "type": "json"
+    }
+  }
+}

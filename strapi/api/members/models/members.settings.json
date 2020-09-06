@@ -31,8 +31,12 @@
       "enum": [
         "Chair",
         "Treasurer",
-        "Secretary"
+        "Secretary",
+        "SecondHandUniformSales"
       ]
+    },
+    "DisplayOrder": {
+      "type": "integer"
     }
   }
 }
