@@ -7,7 +7,7 @@
           <h1>FCC</h1>
         </li>
         <li @click="clickMenu('Home')" class="nav-item menu-links" :class="{selectedMenu:isMenuSelected('Home')}">
-          <nuxt-link class="outline-none" to="/main/home">Home</nuxt-link>
+          <nuxt-link class="outline-none" to="/">Home</nuxt-link>
         </li>
         <li @click="clickMenu('Members')" class="nav-item menu-links" :class="{selectedMenu:isMenuSelected('Members')}">
           <nuxt-link class="outline-none" to="/main/members">Members</nuxt-link>
@@ -16,10 +16,10 @@
             :class="{selectedMenu:isMenuSelected('easyFundraising')}">
           <nuxt-link class="outline-none" to="/main/easy-fundraising">Easy Fundraising</nuxt-link>
         </li>
-        <li @click="clickMenu('pastEvents')" class="nav-item menu-links"
+        <!--<li @click="clickMenu('pastEvents')" class="nav-item menu-links"
             :class="{selectedMenu:isMenuSelected('pastEvents')}">
           <nuxt-link class="outline-none" to="/main/past-pta-events">Past PTA Events</nuxt-link>
-        </li>
+        </li>-->
         <li @click="clickMenu('secondHandUniform')" class="nav-item menu-links"
             :class="{selectedMenu:isMenuSelected('secondHandUniform')}">
           <nuxt-link class="outline-none" to="/main/second-hand-uniform">Second Hand Uniform</nuxt-link>
@@ -35,40 +35,40 @@
 </template>
 
 <script>
-  export default {
-    name: "SideNavBar.vue",
-    data: function () {
-      return {
-        activeItem: 'Home'
-      }
+export default {
+  name: "SideNavBar.vue",
+  data: function () {
+    return {
+      activeItem: 'Home'
+    }
+  },
+  components: {},
+  methods: {
+    clickMenu: function (menuItem) {
+      this.activeItem = menuItem;
     },
-    components: {},
-    methods: {
-      clickMenu: function (menuItem) {
-        this.activeItem = menuItem;
-      },
-      isMenuSelected: function (menuItem) {
-        return (this.activeItem === menuItem);
-      }
+    isMenuSelected: function (menuItem) {
+      return (this.activeItem === menuItem);
+    }
 
-    },
-    computed: {}
-  }
+  },
+  computed: {}
+}
 </script>
 
 <style scoped>
 
-  .side-nav-bar {
-    @apply bg-white
-  }
+.side-nav-bar {
+  @apply bg-white
+}
 
-  .menu-links-header {
-    @apply bg-school_blue text-school_gold text-3xl border-b-4 border-school_gold pl-5;
-  }
+.menu-links-header {
+  @apply bg-school_blue text-school_gold text-3xl border-b-4 border-school_gold pl-5;
+}
 
-  .selectedMenu {
-    @apply text-school_blue border-pink-400
-  }
+.selectedMenu {
+  @apply text-school_blue border-pink-400
+}
 
 
 </style>

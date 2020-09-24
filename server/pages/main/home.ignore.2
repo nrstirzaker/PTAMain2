@@ -11,6 +11,7 @@
             All money raised is fed back into the pupils
           </p>
         </div>
+        <!--
         <div class="flex mt-4">
           <p>
             The current Committee members are as follows:
@@ -35,7 +36,7 @@
             </tbody>
           </table>
         </div>
-
+        -->
         <div class="flex mt-4">
           As a committee we are a small team of parents,
           however all the fundraising activities we organise are facilitated by a large group of parents who come to help at events
@@ -62,7 +63,7 @@ import PublicGcal from 'public-gcal-fetch';
 import axios from 'axios';
 
 export default {
-  name: "main.vue",
+  name: "home.vue",
   data() {
     return {
       members: [],
@@ -77,23 +78,6 @@ export default {
         return a.DisplayOrder - b.DisplayOrder;
       });
     }
-  },
-
-  mounted() {
-
-    let gcal = new PublicGcal({API_key: 'AIzaSyCOjUq0EVnczS5ifRNIS3kySfNi2TKiVvs', calendarId: 'friendsatchristscollege@gmail.com'});
-    let termStart = '2020-09-01T09:00:00-07:00';
-    let termEnd = '2021-07-31T09:00:00-07:00';
-    gcal.getEvents({'timeMin': termStart, 'timeMax': termEnd}, function (error, result) {
-      if (error) {
-        console.log(error);
-      }
-      let i;
-      for (i = 0; i < result.length; i++) {
-        console.log(result[i]);
-      }
-    });
-
   }
 
 }

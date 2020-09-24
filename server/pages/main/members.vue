@@ -2,7 +2,7 @@
   <div class="root">
     <div class="main flex-1">
       <div class="mt-5">
-        <div class="text-tiny">Members</div>
+        <div class="text-tiny">Christ's College / FCC / Members</div>
       </div>
     </div>
     <div class='container'>
@@ -43,6 +43,7 @@
 import axios from 'axios';
 
 export default {
+  name: "members.vue",
   //#ECC33D yellow
   //#182F59 blue
   layout: 'default',

@@ -1,1 +1,1 @@
-heroku logs --app fcc-main
+heroku logs --app fcc-main -t
