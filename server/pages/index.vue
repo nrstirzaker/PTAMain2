@@ -22,8 +22,8 @@
           <table class="table-auto">
             <thead>
             <tr>
-              <th class="w-1/2">&nbsp</th>
-              <th class="w-1/2">&nbsp</th>
+              <th class="w-1/2">Role</th>
+              <th class="w-1/2">Name</th>
             </tr>
             </thead>
             <tbody>
