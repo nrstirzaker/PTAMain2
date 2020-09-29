@@ -46,7 +46,7 @@
             </div>
 
             <div class="mt-4">
-              Next 2nd Hand Uniform Sale <span class="font-bold" v-text="next2ndHandUniformSale()"/>
+              Next 2nd Hand Uniform Sale <span class="font-bold" v-text="next2ndHandUniformSale()"/> from <span class="font-bold">3:15 - 4:15 pm</span>
             </div>
 
           </div>
