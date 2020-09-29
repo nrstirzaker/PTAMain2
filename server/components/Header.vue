@@ -15,13 +15,19 @@
 </template>
 
 <script>
-  export default {
-    name: "Header.vue"
+export default {
+  name: "Header.vue",
+  head() {
+    return {
+      title: "Friend's of Christ's College Guildford"
+    }
+
   }
+}
 </script>
 
 <style scoped>
-  .header {
-    @apply flex text-white bg-school_blue h-24
-  }
+.header {
+  @apply flex text-white bg-school_blue h-24
+}
 </style>
