@@ -12,26 +12,42 @@
       Boys
     </div>
 
-    <table class="table-fixed">
-      <thead>
-      <tr>
-        <th class="w-1/5 px-4 py-2">Blazer</th>
-        <th class="w-1/5 px-4 py-2">Shirt</th>
-        <th class="w-1/5 px-4 py-2">Jumper</th>
-        <th class="w-1/5 px-4 py-2">Tie</th>
-        <th class="w-1/5 px-4 py-2">Trousers</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td class="border px-4 py-2">£9</td>
-        <td class="border px-4 py-2">£4</td>
-        <td class="border px-4 py-2">£7</td>
-        <td class="border px-4 py-2">£2</td>
-        <td class="border px-4 py-2">£1</td>
-      </tr>
-      </tbody>
-    </table>
+
+    <div class="flex">
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Boys-Blazer-400x400.jpg"/>
+        <div class="text-center">Boys Blazer</div>
+        <div class="text-center">£10</div>
+      </div>
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Shirt-400x400.jpg"/>
+        <div class="text-center">Single Shirt</div>
+        <div class="text-center">£4</div>
+      </div>
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Tie-400x400.jpg"/>
+        <div class="text-center">Tie</div>
+        <div class="text-center">£2</div>
+      </div>
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Jumper-400x400.jpg"/>
+        <div class="text-center">Jumper</div>
+        <div class="text-center">£5</div>
+      </div>
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Trousers-400x400.jpg"/>
+        <div class="text-center">Trousers</div>
+        <div class="text-center">£3</div>
+      </div>
+
+
+    </div>
+
 
     <br>
 
@@ -39,30 +55,55 @@
       Girls
     </div>
 
-    <table class="table-fixed">
-      <thead>
-      <tr>
-        <th class="w-1/5 px-4 py-2">Blazer</th>
-        <th class="w-1/5 px-4 py-2">Blouse</th>
-        <th class="w-1/5 px-4 py-2">Cardigan</th>
-        <th class="w-1/5 px-4 py-2">Skirt</th>
-        <th class="w-1/5 px-4 py-2">Trousers</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td class="border px-4 py-2">£9</td>
-        <td class="border px-4 py-2">£4</td>
-        <td class="border px-4 py-2">£7</td>
-        <td class="border px-4 py-2">£5</td>
-        <td class="border px-4 py-2">£4</td>
-      </tr>
-      </tbody>
-    </table>
+    <div class="flex">
 
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Girls-Blazer-400x400.jpg"/>
+        <div class="text-center">Girls Blazer</div>
+        <div class="text-center">£10</div>
+      </div>
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Blouse-400x400.jpg"/>
+        <div class="text-center">Single Blouse</div>
+        <div class="text-center">£4</div>
+      </div>
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Cardi-400x400.jpg"/>
+        <div class="text-center">Cardigan</div>
+        <div class="text-center">£5</div>
+      </div>
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Skirt-400x400.jpg"/>
+        <div class="text-center">Skirt</div>
+        <div class="text-center">£5</div>
+      </div>
+
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Trousers-400x400.jpg"/>
+        <div class="text-center">Trousers</div>
+        <div class="text-center">£3</div>
+      </div>
+
+
+    </div>
 
     <div class="text-2xl">
-      PE Kit
+      General
+    </div>
+
+    <div class="flex">
+      <div>
+        <img class="h-48 w-48" src="~/assets/images/Rucksack-400x400.jpg"/>
+        <div class="text-center">Rucksack</div>
+        <div class="text-center">£8</div>
+      </div>
+    </div>
+
+    <div class="text-2xl">
+      PE Kit Boys
     </div>
 
     <table class="table-fixed">
@@ -96,7 +137,7 @@
 
 
   </div>
-  
+
 </template>
 
 <script>
