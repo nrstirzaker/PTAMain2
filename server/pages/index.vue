@@ -74,7 +74,7 @@ import dayjs from 'dayjs'
 export default {
   layout: 'default',
   name: "index.vue",
-  mounted() {
+  created() {
     dayjs.extend(AdvancedFormat)
   },
   data() {
@@ -106,9 +106,8 @@ export default {
         new Date("2021-07-15")
       ];
 
-      const nextDate = dayjs(dates.find(date => (date > new Date()))).format('dddd Do MMMM');
+      return dayjs(dates.find(date => (date > new Date()))).format('dddd Do MMMM');
 
-      return nextDate;
     },
     nextMeeting: function () {
 
@@ -126,9 +125,8 @@ export default {
 
       ];
 
-      const nextDate = dayjs(dates.find(date => (date > new Date()))).format('dddd Do MMMM');
+      return dayjs(dates.find(date => (date > new Date()))).format('dddd Do MMMM');
 
-      return nextDate;
 
     }
 
