@@ -123,7 +123,7 @@
 
         <div>
           <img class="h-48 w-48" src="~/assets/images/uniform/Football-Shirt-400x400.jpg" alt="Football Shirt"/>
-          <div class=" text-center">Football Shirt
+          <div class=" text-center">New PE Shirt
           </div>
           <div class="text-center">£3</div>
         </div>

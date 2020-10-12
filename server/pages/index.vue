@@ -7,8 +7,8 @@
         <div class="flex mt-4">
           <p>
             The Friend's of Christ's College, the school's PTA,
-            is a community of parents working to enrich the education of all the students.
-            <span class="font-bold">All money raised is used to provide for the pupils</span>
+            is a vital part of the school community, who work throughout the year fundraising for
+            the benefit of Christ’s College students.
           </p>
         </div>
 
@@ -52,13 +52,18 @@
           </div>
         </div>
 
-        <div class="flex mt-4">
-          As a committee we are a small team of parents,
-          however all the fundraising activities we organise are facilitated by a large group of parents who come to help at events
+        <div class="mt-4">
+          In the past few years, we have been able to provide the school with funds for
+          <ul class="ml-6 list-disc">
+            <li>the outdoor table-tennis tables,</li>
+            <li>the new school’s personalised football kits,</li>
+            <li>some language dictionaries</li>
+          </ul>
+          and we are raising funds for an outdoor shelter as requested by the students.
         </div>
 
         <div class="flex mt-4">
-          If you would like to know more about joining the Committee or becoming a “helper” please contact us on the email below as there are numerous ways to help!
+          If you would like to help out as a Committee member or help raise money, please contact us on the email below. There are numerous ways to help!
         </div>
 
 
@@ -81,13 +86,13 @@ export default {
     return {
       members: [
         {"index": 1, "role": "Chair", "name": "Nigel Stirzaker"},
-        {"index": 2, "role": "Treasurer", "name": "Sarah Hedger Howe"},
+        {"index": 2, "role": "Treasurer", "name": "Sarah Hedger-Howe"},
         {"index": 3, "role": "Secretary", "name": "Margret Mayersbeth"},
-        {"index": 4, "role": "2nd Hand Uniform Sales", "name": "Sandra Phillips"},
+        {"index": 4, "role": "2nd Hand Uniform Sales", "name": "Sandra Philips"},
         {"index": 5, "role": "Member", "name": "Hanna Morris"},
         {"index": 6, "role": "Member", "name": "Sylvia Owen"},
-        {"index": 7, "role": "Teacher", "name": "Stuart Kennedy"},
-        {"index": 8, "role": "Teacher", "name": "Zed Annan"},
+        {"index": 7, "role": "Staff Representative", "name": "Stuart Kennedy"},
+        {"index": 8, "role": "Staff Representative", "name": "Zed Annan"},
       ]
     }
   },
