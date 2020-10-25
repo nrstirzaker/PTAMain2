@@ -14,7 +14,7 @@
 
 
         <div class="flex">
-          <div class="w-1/4">
+          <div class="w-1/3">
             <div class="mt-4">
               The current committee members are:
             </div>
@@ -36,19 +36,25 @@
               </tbody>
             </table>
           </div>
-          <div class="w-1/2">
-            <div class="mt-4 text-center">
-              Calendar
-            </div>
-            <div class="mt-4">
-              Next Meeting <span class="font-bold" v-text="nextMeeting()"/>
-              <div>(Due to the 'Rule of 6' we are meeting on-line. If you have ideas or questions please email us for connections details)</div>
-            </div>
+          <div class="border border-4 rounded-md border-blue-900 w-1/3 ml-15 mt-20 mb-20 p-4">
 
-            <div class="mt-4">
-              Next 2nd Hand Uniform Sale <span class="font-bold" v-text="next2ndHandUniformSale()"/> from <span class="font-bold">3:15 - 4:15 pm</span>
-            </div>
+            <div class="align-middle">
 
+              <div class="mt-4 text-center font-bold">
+                Calendar
+              </div>
+
+              <div class="mt-4">
+                Next Meeting <span class="font-bold" v-text="nextMeeting()"/>
+                <div>(Due to the 'Rule of 6' we are meeting on-line.</div>
+                <div> If you have ideas or questions please email us for connections details)</div>
+              </div>
+
+              <div class="mt-4">
+                Next 2nd Hand Uniform Sale <span class="font-bold" v-text="next2ndHandUniformSale()"/> from <span class="font-bold">3:15 - 4:15 pm</span>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -56,7 +62,7 @@
           In the past few years, we have been able to provide the school with funds for
           <ul class="ml-6 list-disc">
             <li>the outdoor table-tennis tables,</li>
-            <li>the new school’s personalised football kits,</li>
+            <li>the school’s new personalised football kits,</li>
             <li>some language dictionaries</li>
           </ul>
           and we are raising funds for an outdoor shelter as requested by the students.
