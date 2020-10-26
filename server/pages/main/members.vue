@@ -67,7 +67,7 @@
             <img src="~/assets/images/members/Sandra.jpg" class="object-fit:contain  w-full" alt="Sandra Philips">
           </div>
           <div class="w-full ml-10">
-            Hi my name is Sandra Phillips. I have 2 boys at Christ's, they are currently in years 7 and 9.
+            Hi my name is Sandra Phillips. I have 2 boys at Christ's, they are currently in years 8 and 10.
             I have been involved with FCC for nearly 2 years. I help run the 2nd hand uniform sales along with Sarah and help at the events like summer festival serving
             refreshments etc.
             I was also involved in the boys previous school PTA, having been involved with both I can definitely say that there is less pressure in a secondary school PTA.
@@ -79,11 +79,18 @@
             <img src="~/assets/images/members/Stuart.jpg" class="object-fit:contain w-full" alt="Stuart Kennedy">
           </div>
           <div class="w-full ml-10">
-            My name is Stuart Kennedy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            I joined the school in September 2000, so have been part of this community for 20yrs now. During that time I have been a full time teacher, head of department and now a
+            member of the leadership team. I have had several roles and responsibilities on the leadership team but one of my favourite things has been as the CLT link for Friends
+            of Christ’s College. I joined in 2012 having been asked by Mr Green to link FCC with the 6th Form. Little did I know the impact it would have on me.
+            I serve as a point of contact and help for FCC. Offering the college point of view or answering questions. I help with getting the student body to work with FCC and
+            between us we all work out what the staff or students need and I liaise with FCC to see how they can help.
+            Over the years FCC has raised so much money for the school and they have had a huge impact on education and students at the college. I get to see first hand the good
+            that they do for the students here and it is amazing how supportive they have been. From rewards schemes to lunchtime benches to 2nd hand uniform and internet safety
+            training...FCC fundraising events have provided a broad range of things that add value to the college.
+            Working with FCC has been a real pleasure and a privilege. It never seems like work to me, we have a lot of fun at our regular meets. They are informal but focussed. I
+            get to discuss school with parents and I learn a lot about the parents point of view. Often taking this information back to Mrs Hatch and the leadership team so we can
+            make improvements or change perceptions. FCC remains a really important part of the school and I could not recommend it highly enough.
+
           </div>
         </div>
 
