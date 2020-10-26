@@ -2,7 +2,7 @@
   <div class="main flex-1">
     <div class="mt-5">
       <div class="text-tiny">Christ's College / FCC / Home</div>
-      <div class="content">
+      <div class="container">
 
         <div class="flex mt-4">
           <p>

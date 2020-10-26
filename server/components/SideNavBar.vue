@@ -66,9 +66,5 @@ export default {
   @apply bg-school_blue text-school_gold text-3xl border-b-4 border-school_gold pl-5;
 }
 
-.selectedMenu {
-  @apply text-school_blue border-pink-400
-}
-
 
 </style>

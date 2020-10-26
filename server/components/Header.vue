@@ -31,6 +31,6 @@ export default {
 
 <style scoped>
 .header {
-  @apply flex text-white bg-school_blue h-32
+  @apply flex text-white bg-school_blue h-24
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
-  <div class="root">
-    <div class="main flex-1">
-      <div class="mt-5">
-        <div class="text-tiny">Christ's College / FCC / Members</div>
-      </div>
+
+  <div class="main flex-1">
+    <div class="mt-5">
+      <div class="text-tiny">Christ's College / FCC / Members</div>
     </div>
+
     <div class='container'>
 
       <div class="member">
