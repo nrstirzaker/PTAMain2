@@ -6,14 +6,14 @@
         <li class="menu-links-header">
           <h1>FCC</h1>
         </li>
-        <li @click="clickMenu('Home')" class="nav-item menu-links" :class="{selectedMenu:isMenuSelected('Home')}">
+        <li @click="clickMenu('Home')" class="nav-item menu-links" :class="{selected:isMenuSelected('Home')}">
           <nuxt-link class="outline-none" to="/">Home</nuxt-link>
         </li>
-        <li @click="clickMenu('Members')" class="nav-item menu-links" :class="{selectedMenu:isMenuSelected('Members')}">
+        <li @click="clickMenu('Members')" class="nav-item menu-links" :class="{selected:isMenuSelected('Members')}">
           <nuxt-link class="outline-none" to="/main/members">Members</nuxt-link>
         </li>
         <li @click="clickMenu('easyFundraising')" class="nav-item menu-links"
-            :class="{selectedMenu:isMenuSelected('easyFundraising')}">
+            :class="{selected:isMenuSelected('easyFundraising')}">
           <nuxt-link class="outline-none" to="/main/easy-fundraising">Easy Fundraising</nuxt-link>
         </li>
         <!--<li @click="clickMenu('pastEvents')" class="nav-item menu-links"
@@ -21,11 +21,11 @@
           <nuxt-link class="outline-none" to="/main/past-pta-events">Past PTA Events</nuxt-link>
         </li>-->
         <li @click="clickMenu('secondHandUniform')" class="nav-item menu-links"
-            :class="{selectedMenu:isMenuSelected('secondHandUniform')}">
+            :class="{selected:isMenuSelected('secondHandUniform')}">
           <nuxt-link class="outline-none" to="/main/second-hand-uniform">Second Hand Uniform</nuxt-link>
         </li>
         <li @click="clickMenu('futureEvents')" class="nav-item menu-links"
-            :class="{selectedMenu:isMenuSelected('futureEvents')}">
+            :class="{selected:isMenuSelected('futureEvents')}">
           <nuxt-link class="outline-none" to="/main/upcoming-pta-events">Upcoming PTA Events</nuxt-link>
         </li>
       </ul>
@@ -64,6 +64,10 @@ export default {
 
 .menu-links-header {
   @apply bg-school_blue text-school_gold text-3xl border-b-4 border-school_gold pl-5;
+}
+
+.selected {
+  @apply text-school_blue
 }
 
 

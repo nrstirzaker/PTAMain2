@@ -1,8 +1,10 @@
 <template>
-  <div class="header">
-    <div class="flex">
-      <div class="w-56 flex-none"></div>
-      <div class="mt-2 flex">
+  <div class="header flex">
+
+    <div class="w-56 mt-4 mb-4 flex-none"></div>
+
+    <div class="mt-4 mb-4">
+      <div class="flex">
         <div class="mr-4">
           <img src="~/assets/images/general/schoolLogo.png" height="66" width="57" alt="School Logo"/>
         </div>
@@ -15,6 +17,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -31,6 +34,6 @@ export default {
 
 <style scoped>
 .header {
-  @apply flex text-white bg-school_blue h-24
+  @apply text-white bg-school_blue h-auto border-b-4 border-school_gold
 }
 </style>
