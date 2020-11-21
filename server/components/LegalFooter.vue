@@ -1,4 +1,5 @@
-cd d  <div class="footer">
+<template>
+<div class="footer">
     <!-- pushed footer to right under main content not nav section-->
     <div class="flex-none w-56 h-24"></div>
     <div class="flex w-full items-center justify-center">
