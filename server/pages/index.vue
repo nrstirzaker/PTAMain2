@@ -105,38 +105,42 @@ export default {
   methods: {
     next2ndHandUniformSale: function () {
       const dates = [
-        new Date("2020-09-25"),
-        new Date("2020-10-23"),
-        new Date("2020-11-27"),
-        new Date("2021-01-29"),
-        new Date("2021-02-26"),
-        new Date("2021-03-26"),
-        new Date("2021-04-30"),
-        new Date("2021-05-28"),
-        new Date("2021-06-25"),
-        new Date("2021-07-15")
+        new Date("2020-09-25 00:00:00"),
+        new Date("2020-10-23 00:00:00"),
+        new Date("2020-11-27 00:00:00"),
+        new Date("2021-01-29 00:00:00"),
+        new Date("2021-02-26 00:00:00"),
+        new Date("2021-03-26 00:00:00"),
+        new Date("2021-04-30 00:00:00"),
+        new Date("2021-05-28 00:00:00"),
+        new Date("2021-06-25 00:00:00"),
+        new Date("2021-07-15 00:00:00")
       ];
 
-      return dayjs(dates.find(date => (date > new Date()))).format('dddd Do MMMM');
+      let today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return dayjs(dates.find(date => (date >= today))).format('dddd Do MMMM');
 
     },
     nextMeeting: function () {
 
       const dates = [
-        new Date("2020-10-07"),
-        new Date("2020-11-11"),
-        new Date("2020-12-09"),
-        new Date("2021-01-13"),
-        new Date("2021-02-03"),
-        new Date("2021-03-10"),
-        new Date("2021-04-21"),
-        new Date("2021-05-12"),
-        new Date("2021-06-16"),
-        new Date("2021-07-14")
+        new Date("2020-10-07 00:00:00"),
+        new Date("2020-11-11 00:00:00"),
+        new Date("2020-12-09 00:00:00"),
+        new Date("2021-01-13 00:00:00"),
+        new Date("2021-02-03 00:00:00"),
+        new Date("2021-03-10 00:00:00"),
+        new Date("2021-04-21 00:00:00"),
+        new Date("2021-05-12 00:00:00"),
+        new Date("2021-06-16 00:00:00"),
+        new Date("2021-07-14 00:00:00")
 
       ];
 
-      return dayjs(dates.find(date => (date > new Date()))).format('dddd Do MMMM');
+      let today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return dayjs(dates.find(date => (date >= today))).format('dddd Do MMMM');
 
 
     }
