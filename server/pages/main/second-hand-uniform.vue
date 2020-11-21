@@ -3,6 +3,17 @@
     <div class="mt-5">
       <div class="text-tiny">Christ's College / FCC / Second Hand Uniforms</div>
       <div class="container">
+
+        <br/>
+
+        <div class="text-lg">
+          Thank you to all parents and carers who have contributed second hand uniform over the last years. Your contributions are invaluable. The Second-Hand Uniform Sale is the
+          FCCs biggest money-maker and it is great to be able to help the school’s community with the essential uniform at very good value. The Second Hand Uniform Sales are held
+          on a monthly basis after school (see dates below).
+        </div>
+
+        <br/>
+
         <div class="text-2xl">
           2nd Hand Uniform Prices
         </div>
@@ -126,7 +137,7 @@
             <img class="h-48 w-48" src="~/assets/images/uniform/Football-Shirt-400x400.jpg" alt="Football Shirt"/>
             <div class=" text-center">New PE Shirt
             </div>
-            <div class="text-center">£3</div>
+            <div class="text-center">£5</div>
           </div>
 
           <div>

@@ -26,7 +26,7 @@
         </li>
         <li @click="clickMenu('futureEvents')" class="nav-item menu-links"
             :class="{selected:isMenuSelected('futureEvents')}">
-          <nuxt-link class="outline-none" to="/main/upcoming-pta-events">Upcoming PTA Events</nuxt-link>
+          <nuxt-link class="outline-none" to="/main/upcoming-pta-events">Events Past and Present</nuxt-link>
         </li>
       </ul>
     </div>

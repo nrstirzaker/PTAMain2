@@ -14,17 +14,15 @@
             <img src="~/assets/images/members/Nigel.jpg" class="object-fit:contain w-full" alt="Nigel Stirzaker">
           </div>
           <div class="w-full ml-10">
-            Hi, my name is Nigel Stirzaker, I’m the current Chair of the Friend’s of Christ’s College, the School’s PTA. Why did I volunteer, why get involved in raising money for
-            this school or any school?
-
-            Why - to make things better, to give all our communities children more and better opportunities than I had when I was at school in the 70s and 80s. All of us as parents
-            want our children to have a better life than we’ve had and many of the opportunities for them to fly higher and further than we have, come via their education in its
-            various forms. Having a home, owned or rented, is a struggle these days as the world of work gets more competitive and it’s only going to get harder. The PTA’s role is
-            to generate money for activities and items that will enhance our children’s all-round education. We don’t tend to focus on the academic side of education but on the
-            soft skills that are so essential in getting along in the work environment. In the past, we have used the money to part-fund internet safety workshops, to hire coaches
-            to take whole year groups to a careers fairs and most recently have bought the school’s brand new football kit. All public schools are short of money, resources, staff
-            and have to work within complex bureaucratic frameworks that our successive governments have designed in an effort to improve things. As a PTA we get to identify needs
-            and provide funds to meet those needs. Why am I involved in the PTA? Because it allows me to play a part in making things better.
+            Hi, my name is <span class="font-bold">Nigel</span> Stirzaker, I am the current chair of FCC, the PTA of Christ’s College. I volunteer because I want to raise funds
+            to give our children more opportunities than I had growing up in the 70s and 80s. I want them to be able to fly higher and further than we have. Having a home, owned or
+            rented, is a struggle these days as the world and work gets more and more competitive. The PTA’s role is to generate money for activities and items that will enhance
+            our children’s all-round education, not necessarily academic but more soft-skills which are essential to get along in the today’s work environments.
+            In the past, we have raised money to part-fund internet safety workshops, hire coaches to take year groups to a career fairs and most recently we have bought the
+            school’s brand-new football kit. All public schools are short of money, resources, staff and have to work within complex bureaucratic frameworks that our successive
+            governments have designed in an effort to improve things. As a PTA we try and identify needs and provide funds to meet those needs. So, why am I a part of the PTA?
+            Because it allows me to play a part
+            in making things better.
           </div>
         </div>
 
@@ -33,15 +31,16 @@
             <img src="~/assets/images/members/Sarah.jpg" class="object-fit:contain w-full" alt="Sarah Howe">
           </div>
           <div class="w-full ml-10">
-            My name is Sarah Howe and I am Treasurer for Friends of Christ’s College. I have a son, Oliver, who is currently in Year 8 at Christ’s College and I have a younger son,
-            Cameron, who will be joining Year 7 in September 2020.
+            My name is <span class="font-bold">Sarah</span> Hedger-Howe, I am Treasurer for Friends of Christ’s College. I have a son who started in Christ’s College in September
+            2018 and I have a younger son
+            who started in 2020.
             I joined the Christ’s College Committee in 2019 as I have a passion for supporting schools where there is a greater need for fundraising and parent support. Currently
-            there are only 5 parent members on the Committee so we are very small, and we would really like to encourage more parents to join our friendly team. I have been on the
-            Committee for Weyfield Primary Academy School for several years so have a lot of fundraising experience. For a Secondary School it is far harder to raise money, because
-            as parents we are far more removed, but our small but perfectly formed team, are trying to engage with parents and students to help make the Friends of Christs College
-            be part of the school community and help raise money to benefit all the children at the school.
+            there are 6 parent members on the Committee. We always encourage more parents to join our friendly team. I have been on the Committee for Weyfield Primary Academy
+            School for several years so have a lot of fundraising experience. For a Secondary School it is harder to raise money, because as parents we are far more removed, but
+            our small team tries to engage with parents and students to help make the Friends of Christ’s College be a real part of the school community.
             I come from a PA background so have a lot of experience in organisation and administration, but my key asset is being a people person, so please don’t hesitate to speak
             to me if you feel you would like to join the team or help in anyway as I am very approachable!
+            You will find me at most 2nd Hand Uniform sales too where I help Sandra Philips of our team.
           </div>
         </div>
 
@@ -50,15 +49,13 @@
             <img src="~/assets/images/members/Margareth.jpg" class="object-fit:contain w-full" alt="Margareth Mayersbeth">
           </div>
           <div class="w-full ml-10">
-            Hi my name is Margareth Mayersbeth, I have two children at Christ's college, one started in September 2017, the other in 2019.
-            I have helped FCC since November 2019 and it has been really great to meet monthly at Worplesdon Place with the FCC team to come up with ideas for building up our
-            school's community and to raise funds. I have taken on the secretarial duties for FCC.
-            I have recently become an exam invigilator too and volunteer at the schools library regularly during the day.
-            Forthrightly I enjoy attending Parents Prayer in the Chapel to pray for our school too.
-            I have been a class representative in my children's primary school and enjoy getting together building the school's community.
-
-            Me and Nigel knew each other from Ripley Primary school, a local school which had to go through closure. It was a painful process and this made me realise even more how
-            important parental input, community, fundraising and positivity is for a school, no matter what size the school is.
+            Hi my name is <span class="font-bold">Margareth</span> Mayersbeth, I have two children at Christ’s College, one started in September 2017 and another in 2019. I have
+            helped FCC since November 2019
+            and it has been really great to meet at Worplesdon Place with the FCC team to come up with ideas for building up our school’s community and to raise funds. I have taken
+            on the role of secretarial duties for FCC. I have recently become an exam invigilator and volunteer at the school’s library regularly during the day. Fortnightly I
+            enjoy attending Parents Prayer in the Chapel to pray for our school too. I have been a class representative in my children’s primary school and enjoy getting together
+            building up the school’s community. Nigel and I knew each other from Ripley Primary School, a local school which had to go through closure. It was a painful process and
+            this made me realize even more how important parental input, community, fundraising and positivity is for a school, no matter what size the school is.
           </div>
         </div>
 
@@ -67,10 +64,10 @@
             <img src="~/assets/images/members/Sandra.jpg" class="object-fit:contain  w-full" alt="Sandra Philips">
           </div>
           <div class="w-full ml-10">
-            Hi my name is Sandra Phillips. I have 2 boys at Christ's, they are currently in years 8 and 10.
-            I have been involved with FCC for nearly 2 years. I help run the 2nd hand uniform sales along with Sarah and help at the events like summer festival serving
-            refreshments etc.
-            I was also involved in the boys previous school PTA, having been involved with both I can definitely say that there is less pressure in a secondary school PTA.
+            Hi my name is <span class="font-bold">Sandra</span> Philips. I have 2 boys at Christ’s College. One started in 2017 and the other it 2019. I have been involved in FCC
+            since 2018. I help run the 2nd hand uniform sales along with Sarah and I help at events like the summer festival serving refreshments etc. I was also involved in my
+            boy’s previous school’s PTA too.
+            Having been involved in both I can definitely say that there is less pressure in a secondary school’s PTA.
           </div>
         </div>
 
@@ -99,7 +96,7 @@
             <img src="~/assets/images/members/Zed.jpg" class="object-fit:contain w-full" alt="Zed Annan">
           </div>
           <div class="w-full ml-10">
-            Hi My name is Zed Annan and I have worked at Christ's College for almost 4 years.
+            Hi My name is <span class="font-bold">Zed</span> Annan and I have worked at Christ's College for almost 4 years.
             I am the Student Development Lead which incorporates lots of different aspects of the school, including leading on careers and mental health & Wellbeing. I am also a
             part of the safeguarding team.
             Having only recently joined the FCC I can honestly say how welcoming they all are. The sense of community is one of the many things that makes me love working at CCG
@@ -113,11 +110,9 @@
             <img src="~/assets/images/members/Hanna.jpg" class="object-fit:contain  w-full" alt="Hanna Morris">
           </div>
           <div class="w-full ml-10">
-            My name is Hanna Morris. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Hi, my name is <span class="font-bold">Hanna</span> Morris. I have two children at Christ’s College who joined in September 2020. I have a son in year 8 and a daughter
+            in year 7. I have only recently
+            become involved with the PTA but help out wherever I can. I like to get involved and be part of the community, helping to raise important funds for the school.
           </div>
         </div>
 
@@ -126,11 +121,11 @@
             <img src="~/assets/images/members/Sylvia.jpg" class="object-fit:contain  w-full" alt="Sylvia Owen">
           </div>
           <div class="w-full ml-10">
-            My name is Sylvia Owen. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Hello I'm <span class="font-bold">Sylvia</span> Owen I have a child in year 7. I work with adults with a learning disabilities part-time and so I've always
+            been involved in helping Stoughton
+            and Northmead schools through helping at functions:school fairs, Christmas fairs and also in school with listening to children read. I feel it's so important to know
+            that your child knows you're involved in their lives and also get to know teachers and have fun. With Christ's College I hope that I can contribute in a small way and
+            good to feel involved in aspects of school life even through the pandemic way of working. Sylvia Owen
           </div>
         </div>
 

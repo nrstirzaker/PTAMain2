@@ -1,17 +1,25 @@
 <template>
   <div class="main flex-1">
     <div class="mt-5">
-      <div class="text-tiny">Christ's College / FCC / Upcoming Events</div>
+      <div class="text-tiny">Christ's College / FCC / Events Past and Present</div>
       <div class="content">
 
         <br>
+        <div class="text-2xl">PAST</div>
+        <ul>
+          <li><span class="font-bold">Table Top Sale December 2019:</span> <br/>Just like a carboot sale, the table top sale was a fun event where anyone could book a table and
+            sell their ‘goods’, it was an alternative to the usual Christmas fayre and with some Christmas songs in the background it became a very pleasant day.
+          </li>
+          <li><span class="font-bold">Production February 2020:</span> FCC contributes to the popular yearly school’s musical production in various ways. We welcome parents with
+            drink and a popcorn sale as well as the opportunity of buying raffle tickets every night with possibility to win one of the four amazing luxury hampers. FCC offers free
+            refreshments at various events and sometimes mince-pies and biscuits!
+          </li>
+        </ul>
+        <div class="text-2xl">COMING</div>
 
-        <p>
-          Due to the Covid pandemic we are currently working with the school so see what events we can do.
-        </p>
-        <p>
-          Our second hand uniform sales are continuing following Covid safe protocols
-        </p>
+        <ul>
+          <li>Outdoor movie cinema 9th of July 2020</li>
+        </ul>
 
       </div>
     </div>

@@ -46,7 +46,7 @@
 
               <div class="mt-4">
                 Next Meeting <span class="font-bold" v-text="nextMeeting()"/>
-                <div>(Due to the 'Rule of 6' we are meeting on-line.</div>
+                <div>(Due to Covid restrictions we are meeting on-line.</div>
                 <div> If you have ideas or questions please email us for connections details)</div>
               </div>
 
@@ -93,7 +93,7 @@ export default {
       members: [
         {"index": 1, "role": "Chair", "name": "Nigel Stirzaker"},
         {"index": 2, "role": "Treasurer", "name": "Sarah Hedger-Howe"},
-        {"index": 3, "role": "Secretary", "name": "Margret Mayersbeth"},
+        {"index": 3, "role": "Secretary", "name": "Margareth Mayersbeth"},
         {"index": 4, "role": "2nd Hand Uniform Sales", "name": "Sandra Philips"},
         {"index": 5, "role": "Member", "name": "Hanna Morris"},
         {"index": 6, "role": "Member", "name": "Sylvia Owen"},
