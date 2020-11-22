@@ -4,6 +4,15 @@
 /* purgecss end ignore */
 @import 'tailwindcss/utilities';
 
+.external-links {
+  color: #ecc33d;
+}
+
+.external-links:hover {
+  color: #182f59;
+}
+
+
 .menu-links {
   @apply pt-1 pb-1 pr-1 pl-5
 }
@@ -11,4 +20,5 @@
 .menu-links:hover {
   @apply text-school_blue bg-link_words_bg_hover_gray text-base
 }
+
 
