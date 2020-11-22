@@ -6,7 +6,7 @@
 
         <br/>
 
-        <div class="text-lg">
+        <div class="text-lg                                                                               ">
           Thank you to all parents and carers who have contributed second hand uniform over the last years. Your contributions are invaluable. The Second-Hand Uniform Sale is the
           FCCs biggest money-maker and it is great to be able to help the school’s community with the essential uniform at very good value. The Second Hand Uniform Sales are held
           on a monthly basis after school (see dates below).
@@ -143,6 +143,12 @@
           <div>
             <img class="h-48 w-48" src="~/assets/images/uniform/Rugby-Shirt-400x400.jpg" alt="Rugby Shirt"/>
             <div class="text-center">Rugby Shirt</div>
+            <div class="text-center">£5</div>
+          </div>
+
+          <div>
+            <img class="h-48 w-48" src="~/assets/images/uniform/Hoodie-400x400.jpg" alt="Rugby Shirt"/>
+            <div class="text-center">Hoodie</div>
             <div class="text-center">£5</div>
           </div>
 

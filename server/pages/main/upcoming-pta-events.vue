@@ -18,7 +18,7 @@
         <div class="text-2xl">COMING</div>
 
         <ul>
-          <li>Outdoor movie cinema 9th of July 2020</li>
+          <li>Outdoor movie cinema 9th of July 2021</li>
         </ul>
 
       </div>
