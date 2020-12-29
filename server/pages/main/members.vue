@@ -65,7 +65,7 @@ export default {
         "Sylvia.jpg"
       ]
 
-      return '/_nuxt/assets/images/members/' + images[id - 1];
+      return this.getCMSBaseURL() + '/_nuxt/assets/images/members/' + images[id - 1];
     }
   },
   mounted() {
