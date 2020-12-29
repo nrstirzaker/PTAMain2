@@ -45,14 +45,13 @@ export default {
   layout: 'default',
   data() {
     return {
-      members: [],
-      images: []
+      members: []
     }
 
   },
   methods: {
     getCMSBaseURL: function () {
-      return process.env.NUXT_ENV_STRAPI_BASE_URL;
+      return this.$config.cmsBaseURL;
     },
     getMemberImageURL: function (id) {
       const images = [

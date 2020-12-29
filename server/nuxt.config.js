@@ -31,8 +31,7 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/tailwindcss'
   ],
   /*
   ** Nuxt.js modules
@@ -53,8 +52,10 @@ export default {
     linkify: true,
     breaks: true,
     injected: true
-  }
-  ,
+  },
+  publicRuntimeConfig: {
+    cmsBaseURL: process.env.NUXT_ENV_STRAPI_BASE_URL
+  },
   /*
   ** Build configuration
   */
