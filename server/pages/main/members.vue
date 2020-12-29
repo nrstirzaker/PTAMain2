@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     getCMSBaseURL: function () {
-      return this.$config.cmsBaseURL;
+      return 'https://fcc-strapi.herokuapp.com';
     },
     getMemberImageURL: function (id) {
       const images = [
