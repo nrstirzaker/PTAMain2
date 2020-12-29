@@ -46,7 +46,8 @@ export default {
       return process.env.NUXT_ENV_STRAPI_BASE_URL;
     },
     getMemberImageURL: function (member) {
-      return this.getCMSBaseURL() + member.photo.url;
+      let url = this.getCMSBaseURL() + member.photo.url || '';
+      return url;
     }
   },
   mounted() {
