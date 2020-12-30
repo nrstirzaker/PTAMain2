@@ -10,12 +10,12 @@
       <div class="member">
         <ul>
           <li
-            v-for="member in members"
-            :key="member._id"
+            v-for="(member, key) in members"
           >
             <div class="flex m-10">
               <div class="w-48">
-                <img v-bind:src="getMemberImageURL(member.visual_order)" class="object-fit:contain w-full" :alt=member.name>
+                <!--<img :src='items[key].src' class="object-fit:contain w-full" :alt=member.name>-->
+                <img v-bind:src='getMemberImageURL(key)' class="object-fit:contain w-full" :alt=member.name>
               </div>
               <div class="w-full ml-10">
                 <div v-html="$md.render(member.bio)"></div>
@@ -31,14 +31,32 @@
 
 <script>
 import axios from 'axios';
-import Nigel from '~/assets/images/members/Nigel.jpg';
-import Sarah from '~/assets/images/members/Sarah.jpg';
-import Margareth from '~/assets/images/members/Margareth.jpg';
-import Sandra from '~/assets/images/members/Sandra.jpg';
-import Hanna from '~/assets/images/members/Hanna.jpg';
-import Sylvia from '~/assets/images/members/Sylvia.jpg';
-import Stuart from '~/assets/images/members/Stuart.jpg';
-import Zed from '~/assets/images/members/Zed.jpg';
+
+
+//const images = require.context('../../static/images/members', true, /\.jpg$/);
+//const images = require.context('../../static/', false, /\.jpg$/);
+//this is used to ensure that the images are pulled into the build
+const images = require.context('../../assets/images/members', true, /\.jpg$/);
+// const imagesArray = Array.from(images.keys());
+// console.log(images);
+// console.log(imagesArray);
+
+// let constructed = [];
+//
+// function constructItems(fileNames, constructed) {
+//   fileNames.forEach(fileName => {
+//     console.log("filename.substr:" + fileName.substr(1))
+//     let nameKey = fileName.trim().substr(2, fileName.length - 6);
+//     console.log("nameKey:" + nameKey);
+//     let memberImageData = {[nameKey]: {'src': '../../_nuxt/assets/images/members' + fileName.substr(1)}}
+//     constructed.push(memberImageData);
+//   });
+//   return constructed;
+// };
+
+
+//let res = constructItems(imagesArray, constructed);
+
 
 export default {
   name: "members.vue",
@@ -64,8 +82,7 @@ export default {
         "Hanna.jpg",
         "Sylvia.jpg"
       ]
-
-      return '_nuxt/assets/images/members/' + images[id - 1];
+      return '../../_nuxt/assets/images/members/' + images[id];
     }
   },
   mounted() {
@@ -81,6 +98,13 @@ export default {
     )
       .then(response => {
         this.members = response.data;
+        // let membersArray = [];
+        // membersArray = response.data;
+        // membersArray.forEach(member => {
+        //   member.firstName = member.name.split(" ")[0]
+        //   this.members.push(member);
+        // })
+
       })
   }
 
