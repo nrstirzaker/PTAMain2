@@ -81,6 +81,7 @@
 <script>
 import AdvancedFormat from 'dayjs/plugin/advancedFormat'
 import dayjs from 'dayjs'
+import axios from '@nuxtjs/axios'
 
 export default {
   layout: 'default',
@@ -90,19 +91,41 @@ export default {
   },
   data() {
     return {
-      members: [
-        {"index": 1, "role": "Chair", "name": "Nigel Stirzaker"},
-        {"index": 2, "role": "Treasurer", "name": "Sarah Hedger-Howe"},
-        {"index": 3, "role": "Secretary", "name": "Margareth Mayersbeth"},
-        {"index": 4, "role": "2nd Hand Uniform Sales", "name": "Sandra Philips"},
-        {"index": 5, "role": "Member", "name": "Hanna Morris"},
-        {"index": 6, "role": "Member", "name": "Sylvia Owen"},
-        {"index": 7, "role": "Staff Representative", "name": "Stuart Kennedy"},
-        {"index": 8, "role": "Staff Representative", "name": "Zed Annan"},
-      ]
+      loading: true,
+      members: this.getMembers(),
+      meetingDates: dayjs(),
+      uniformSalesDates: dayjs()
     }
   },
+
+
+  // members: [
+  //   {"index": 1, "role": "Chair", "name": "Nigel Stirzaker"},
+  //   {"index": 2, "role": "Treasurer", "name": "Sarah Hedger-Howe"},
+  //   {"index": 3, "role": "Secretary", "name": "Margareth Mayersbeth"},
+  //   {"index": 4, "role": "2nd Hand Uniform Sales", "name": "Sandra Philips"},
+  //   {"index": 5, "role": "Member", "name": "Hanna Morris"},
+  //   {"index": 6, "role": "Member", "name": "Sylvia Owen"},
+  //   {"index": 7, "role": "Staff Representative", "name": "Stuart Kennedy"},
+  //   {"index": 8, "role": "Staff Representative", "name": "Zed Annan"},
+  // ]
   methods: {
+
+    async getMembers() {
+      await this.$axios.get(process.env.NUXT_ENV_STRAPI_BASE_URL + "/members", {params: {_sort: 'visual_order:ASC'}})
+        .then(response => {
+          if (response.status = 200) {
+            this.members = response.data
+          } else {
+            console.log("Server returned " + response.status + " : " + response.statusText)
+          }
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    },
+
+
     next2ndHandUniformSale: function () {
       const dates = [
         new Date("2020-09-25 00:00:00"),
