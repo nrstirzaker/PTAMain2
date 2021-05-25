@@ -92,7 +92,7 @@ export default {
   data() {
     return {
       loading: true,
-      members: this.getMembers(),
+      members: null,
       meetingDates: dayjs(),
       uniformSalesDates: dayjs()
     }
@@ -109,10 +109,13 @@ export default {
   //   {"index": 7, "role": "Staff Representative", "name": "Stuart Kennedy"},
   //   {"index": 8, "role": "Staff Representative", "name": "Zed Annan"},
   // ]
+  mounted: {
+    this.$methods.getMembers()
+  },
   methods: {
 
-    async getMembers() {
-      await this.$axios.get(process.env.NUXT_ENV_STRAPI_BASE_URL + "/members", {params: {_sort: 'visual_order:ASC'}})
+    getMembers() {
+      axios.get(process.env.NUXT_ENV_STRAPI_BASE_URL + "/members", {params: {_sort: 'visual_order:ASC'}})
         .then(response => {
           if (response.status = 200) {
             this.members = response.data
@@ -142,7 +145,8 @@ export default {
 
       let today = new Date();
       today.setHours(0, 0, 0, 0);
-      return dayjs(dates.find(date => (date >= today))).format('dddd Do MMMM');
+      //return dayjs(dates.find(date => (date >= today))).format('dddd Do MMMM');
+      return dates.find(date => (date >= today));
 
     },
     nextMeeting: function () {
@@ -163,7 +167,8 @@ export default {
 
       let today = new Date();
       today.setHours(0, 0, 0, 0);
-      return dayjs(dates.find(date => (date >= today))).format('dddd Do MMMM');
+      //return dayjs(dates.find(date => (date >= today))).format('dddd Do MMMM');
+      return dates.find(date => (date >= today));
 
 
     }
