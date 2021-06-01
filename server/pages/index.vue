@@ -36,7 +36,7 @@
               </tbody>
             </table>
           </div>
-          <div class="border border-4 rounded-md border-blue-900 w-1/3 ml-15 mt-20 mb-20 p-4">
+          <div class="border border-4 rounded-md border-blue-900 w-5/12 ml-15 mt-20 mb-20 p-4">
 
             <div class="align-middle">
 
@@ -45,13 +45,20 @@
               </div>
 
               <div class="mt-4">
-                Next Meeting <span class="font-bold" v-text="nextMeeting()"/>
-                <div>(Due to Covid restrictions we are meeting on-line.</div>
-                <div> If you have ideas or questions please email us for connections details)</div>
+                Next FCC Committee Meeting
+                <div class="font-bold" v-text="displayNextMeetingDate(nextMeetingDate())"/>
+                <div class="italic">
+                  <div>(Due to Covid restrictions, specifically "rule of 6" and committee member availability we are still sometimes meeting on-line.
+                    If you have ideas or questions please email us for connection details)
+                  </div>
+                </div>
               </div>
 
               <div class="mt-4">
-                Next 2nd Hand Uniform Sale <span class="font-bold" v-text="next2ndHandUniformSale()"/> from <span class="font-bold">3:15 - 4:15 pm</span>
+                Next 2nd Hand Uniform Sale ( See
+                <nuxt-link class="outline-none" to="/main/second-hand-uniform">Details</nuxt-link>
+                )
+                <div class="font-bold" v-text="displayDateAndTimeWithRange(next2ndHandUniformSaleDate())"/>
               </div>
 
             </div>
@@ -79,14 +86,13 @@
 </template>
 
 <script>
-import AdvancedFormat from 'dayjs/plugin/advancedFormat'
-import dayjs from 'dayjs'
+import moment from 'moment';
 
 export default {
   layout: 'default',
   name: "index.vue",
   created() {
-    dayjs.extend(AdvancedFormat)
+
   },
   data() {
     return {
@@ -103,7 +109,7 @@ export default {
     }
   },
   methods: {
-    next2ndHandUniformSale: function () {
+    next2ndHandUniformSaleDate: function () {
       const dates = [
         new Date("2020-09-25 00:00:00"),
         new Date("2020-10-23 00:00:00"),
@@ -112,40 +118,56 @@ export default {
         new Date("2021-02-26 00:00:00"),
         new Date("2021-03-26 00:00:00"),
         new Date("2021-04-30 00:00:00"),
-        new Date("2021-05-28 00:00:00"),
-        new Date("2021-06-25 00:00:00"),
-        new Date("2021-07-15 00:00:00")
+        new Date("2021-06-23 15:15:00"),
+        new Date("2021-07-17 10:00:00"),
+        new Date("2021-07-31 10:00:00")
       ];
 
       let today = new Date();
       today.setHours(0, 0, 0, 0);
-      return dayjs(dates.find(date => (date >= today))).format('dddd Do MMMM');
+      return dates.find(date => (date >= today));
 
     },
-    nextMeeting: function () {
+    nextMeetingDate: function () {
 
       const dates = [
-        new Date("2020-10-07 00:00:00"),
-        new Date("2020-11-11 00:00:00"),
-        new Date("2020-12-09 00:00:00"),
-        new Date("2021-01-13 00:00:00"),
-        new Date("2021-02-03 00:00:00"),
-        new Date("2021-03-10 00:00:00"),
-        new Date("2021-04-21 00:00:00"),
-        new Date("2021-05-12 00:00:00"),
-        new Date("2021-06-16 00:00:00"),
-        new Date("2021-07-14 00:00:00")
+        new Date("2020-10-07 18:45:00"),
+        new Date("2020-11-11 18:45:00"),
+        new Date("2020-12-09 18:45:00"),
+        new Date("2021-01-13 18:45:00"),
+        new Date("2021-02-03 18:45:00"),
+        new Date("2021-03-10 18:45:00"),
+        new Date("2021-04-21 18:45:00"),
+        new Date("2021-05-12 18:45:00"),
+        new Date("2021-06-16 18:45:00"),
+        new Date("2021-07-14 18:45:00")
 
       ];
 
       let today = new Date();
       today.setHours(0, 0, 0, 0);
-      return dayjs(dates.find(date => (date >= today))).format('dddd Do MMMM');
+      return dates.find(date => (date >= today));
 
+    },
+    displayNextMeetingDate: function (date) {
+      let dateWrapper = moment(date);
+      return dateWrapper.format('dddd Do MMMM') + ' at ' + dateWrapper.format('h:m a');
+    },
+    displayDateAndTimeWithRange: function (date) {
+      let dateWrapper = moment(date);
+      let base = dateWrapper.format('dddd Do MMMM') + ' from ' + dateWrapper.format('h:m a') + ' until approximately ';
+
+      if (dateWrapper.day() === moment().day('saturday').day()) {
+        return base + dateWrapper.add(2, 'hours').format('h:m a');
+      } else {
+        return base + dateWrapper.add(1, 'hours').format('h:m a');
+      }
 
     }
 
+
   }
+
 
 }
 </script>

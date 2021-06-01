@@ -6,10 +6,17 @@
 
         <br/>
 
-        <div class="text-lg                                                                               ">
+        <div class="text-lg">
           Thank you to all parents and carers who have contributed second hand uniform over the last years. Your contributions are invaluable. The Second-Hand Uniform Sale is the
-          FCCs biggest money-maker and it is great to be able to help the school’s community with the essential uniform at very good value. The Second Hand Uniform Sales are held
-          on a monthly basis after school (see dates below).
+          FCCs biggest money-maker and it is great to be able to help the school’s community with the essential uniform at very good value. We try to hold the second hand uniform
+          sales monthly and more often at important times of the school year. These are the future dates:
+        </div>
+        <div>
+          <ul class="font-bold">
+            <li v-for="dates in getAllFuture2ndHandUniformSaleDates()">
+              {{ $moment(dates).format('dddd Do MMMM') + ' at ' + $moment(dates).format('h:m a') }}
+            </li>
+          </ul>
         </div>
 
         <br/>
@@ -168,7 +175,29 @@
 
 <script>
 export default {
-  name: "second-hand-uniform.vue"
+  name: "second-hand-uniform.vue",
+  methods: {
+    getAllFuture2ndHandUniformSaleDates: function () {
+      const dates = [
+        new Date("2020-09-25 00:00:00"),
+        new Date("2020-10-23 00:00:00"),
+        new Date("2020-11-27 00:00:00"),
+        new Date("2021-01-29 00:00:00"),
+        new Date("2021-02-26 00:00:00"),
+        new Date("2021-03-26 00:00:00"),
+        new Date("2021-04-30 00:00:00"),
+        new Date("2021-06-23 15:15:00"),
+        new Date("2021-07-17 10:00:00"),
+        new Date("2021-07-31 10:00:00")
+      ];
+      let today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return dates.filter(date => (date >= today));
+    },
+    displayFuture2ndHandUniformSaleDates: function (dates) {
+
+    }
+  }
 }
 </script>
 
