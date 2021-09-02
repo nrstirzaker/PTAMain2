@@ -47,42 +47,38 @@
               <div class="mt-4">
                 Next FCC Committee Meeting
                 <div class="font-bold" v-text="displayNextMeetingDate(nextMeetingDate())"/>
-                <div class="italic">
-                  <div>(Due to Covid restrictions, specifically "rule of 6" and committee member availability we are still sometimes meeting on-line.
-                    If you have ideas or questions please email us for connection details)
-                  </div>
-                </div>
               </div>
-
-              <div class="mt-4">
-                Next 2nd Hand Uniform Sale ( See
-                <nuxt-link class="outline-none" to="/main/second-hand-uniform">Details</nuxt-link>
-                )
-                <div class="font-bold" v-text="displayDateAndTimeWithRange(next2ndHandUniformSaleDate())"/>
-              </div>
-
             </div>
+
+            <div class="mt-4">
+              Next 2nd Hand Uniform Sale ( See
+              <nuxt-link class="outline-none" to="/main/second-hand-uniform">Details</nuxt-link>
+              )
+              <div class="font-bold" v-text="displayDateAndTimeWithRange(next2ndHandUniformSaleDate())"/>
+            </div>
+
           </div>
         </div>
-
-        <div class="mt-4">
-          In the past few years, we have been able to provide the school with funds for
-          <ul class="ml-6 list-disc">
-            <li>the outdoor table-tennis tables,</li>
-            <li>the school’s new personalised football kits,</li>
-            <li>some language dictionaries</li>
-          </ul>
-          and we are raising funds for an outdoor shelter as requested by the students.
-        </div>
-
-        <div class="flex mt-4">
-          If you would like to help out as a Committee member or help raise money, please contact us on the email below. There are numerous ways to help!
-        </div>
-
-
       </div>
+
+      <div class="mt-4">
+        In the past few years, we have been able to provide the school with funds for
+        <ul class="ml-6 list-disc">
+          <li>the outdoor table-tennis tables,</li>
+          <li>the school’s new personalised football kits,</li>
+          <li>some language dictionaries</li>
+        </ul>
+        and we are raising funds for an outdoor shelter as requested by the students.
+      </div>
+
+      <div class="flex mt-4">
+        If you would like to help out as a Committee member or help raise money, please contact us on the email below. There are numerous ways to help!
+      </div>
+
+
     </div>
   </div>
+
 </template>
 
 <script>
@@ -111,7 +107,7 @@ export default {
   methods: {
     next2ndHandUniformSaleDate: function () {
       const dates = [
-        new Date("2020-09-25 00:00:00"),
+        new Date("2021-09-24 02:45:00"),
         new Date("2020-10-23 00:00:00"),
         new Date("2020-11-27 00:00:00"),
         new Date("2021-01-29 00:00:00"),
@@ -120,7 +116,8 @@ export default {
         new Date("2021-04-30 00:00:00"),
         new Date("2021-06-23 15:15:00"),
         new Date("2021-07-17 10:00:00"),
-        new Date("2021-07-31 10:00:00")
+        new Date("2021-07-31 10:00:00"),
+        new Date("3000-01-01 00:00:00")
       ];
 
       let today = new Date();
@@ -131,7 +128,6 @@ export default {
     nextMeetingDate: function () {
 
       const dates = [
-        new Date("2020-10-07 18:45:00"),
         new Date("2020-11-11 18:45:00"),
         new Date("2020-12-09 18:45:00"),
         new Date("2021-01-13 18:45:00"),
@@ -140,7 +136,8 @@ export default {
         new Date("2021-04-21 18:45:00"),
         new Date("2021-05-12 18:45:00"),
         new Date("2021-06-16 18:45:00"),
-        new Date("2021-07-07 18:30:00")
+        new Date("2021-07-07 18:30:00"),
+        new Date("3000-01-01 00:00:00")
 
       ];
 
@@ -151,10 +148,16 @@ export default {
     },
     displayNextMeetingDate: function (date) {
       let dateWrapper = moment(date);
+      if (dateWrapper.year() === 3000) {
+        return "TBA"
+      }
       return dateWrapper.format('dddd Do MMMM') + ' at ' + dateWrapper.format('h:m a');
     },
     displayDateAndTimeWithRange: function (date) {
       let dateWrapper = moment(date);
+      if (dateWrapper.year() === 3000) {
+        return "TBA"
+      }
       let base = dateWrapper.format('dddd Do MMMM') + ' from ' + dateWrapper.format('h:m a') + ' until approximately ';
 
       if (dateWrapper.day() === moment().day('saturday').day()) {
