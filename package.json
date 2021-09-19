@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "nightwatch": "^1.7.8"
+  }
+}
