@@ -45,7 +45,7 @@
               </div>
 
               <div class="mt-4">
-                Next FCC Committee Meeting
+                Next FCC Committee Meeting (At the Jovial Sailor Ripley)
                 <div class="font-bold" v-text="displayNextMeetingDate(nextMeetingDate())"/>
               </div>
             </div>
