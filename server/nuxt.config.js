@@ -55,7 +55,7 @@ export default {
     injected: true
   },
   publicRuntimeConfig: {
-    cmsBaseURL: process.env.NUXT_ENV_STRAPI_BASE_URL
+    STRAPI_BASE_URL: process.env.NUXT_ENV_STRAPI_BASE_URL
   },
   /*
   ** Build configuration
