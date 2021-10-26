@@ -46,7 +46,7 @@
 
               <div class="mt-4">
                 Next FCC Committee Meeting (At the Jovial Sailor Ripley)
-                <div class="font-bold" v-text="displayNextMeetingDate(nextMeetingDate())"/>
+                <div class="font-bold" v-text="displayNextMeetingDate(pickNextDate(this.meetingDates))"/>
               </div>
             </div>
 
@@ -54,7 +54,7 @@
               Next 2nd Hand Uniform Sale ( See
               <nuxt-link class="outline-none" to="/main/second-hand-uniform">Details</nuxt-link>
               )
-              <div class="font-bold" v-text="displayDateAndTimeWithRange(next2ndHandUniformSaleDate())"/>
+              <div class="font-bold" v-text="displayDateAndTimeWithRange(pickNextDate(this.uniformSaleDates))"/>
             </div>
 
           </div>
@@ -83,6 +83,7 @@
 
 <script>
 import moment from 'moment';
+import axios from '@nuxtjs/axios';
 
 export default {
   layout: 'default',
@@ -90,8 +91,13 @@ export default {
   created() {
 
   },
+  mounted() {
+
+  },
   data() {
     return {
+      meetingDates: 'TBA',
+      uniformSaleDates: 'TBA',
       members: [
         {"index": 1, "role": "Chair", "name": "Nigel Stirzaker"},
         {"index": 2, "role": "Treasurer", "name": "Sarah Hedger-Howe"},
@@ -104,55 +110,47 @@ export default {
       ]
     }
   },
+  fetchOnServer: true,
+  async fetch() {
+    const baseStrapiURL = this.$config.strapiBaseUrl;
+    const meetingDates = await this.$axios.$get(baseStrapiURL + '/meeting-dates');
+    this.meetingDates = meetingDates;
+
+    const uniformSaleDates = await this.$axios.$get(baseStrapiURL + '/uniform-sale-dates');
+    this.uniformSaleDates = uniformSaleDates;
+
+
+  },
+
+
   methods: {
-    next2ndHandUniformSaleDate: function () {
-      const dates = [
-        new Date("2021-09-24 02:45:00"),
-        new Date("2020-10-23 00:00:00"),
-        new Date("2020-11-27 00:00:00"),
-        new Date("2021-01-29 00:00:00"),
-        new Date("2021-02-26 00:00:00"),
-        new Date("2021-03-26 00:00:00"),
-        new Date("2021-04-30 00:00:00"),
-        new Date("2021-06-23 15:15:00"),
-        new Date("2021-07-17 10:00:00"),
-        new Date("2021-07-31 10:00:00"),
-        new Date("3000-01-01 00:00:00")
-      ];
+
+    pickNextDate: function (records) {
+      let meetingDatesAndTimes = [];
+      for (let key in records) {
+        let record = records[key]
+        let dateTime = String(record['Date']) + " " + String(record['Time']);
+        meetingDatesAndTimes.push(new Date(dateTime));
+      }
+      let futureTBADate = new Date();
+      futureTBADate.setHours(0, 0, 0, 0);
+      futureTBADate.setFullYear(3000, 1, 1);
+      meetingDatesAndTimes.push(futureTBADate);
 
       let today = new Date();
       today.setHours(0, 0, 0, 0);
-      return dates.find(date => (date >= today));
+      return meetingDatesAndTimes.find(date => (date >= today));
 
     },
-    nextMeetingDate: function () {
 
-      const dates = [
-        new Date("2021-09-29 18:00:00"),
-        new Date("2021-11-03 18:30:00"),
-        new Date("2021-01-13 18:30:00"),
-        new Date("2021-02-03 18:30:00"),
-        new Date("2021-03-10 18:30:00"),
-        new Date("2021-04-21 18:30:00"),
-        new Date("2021-05-12 18:30:00"),
-        new Date("2021-06-16 18:30:00"),
-        new Date("2021-07-07 18:30:00"),
-        new Date("3000-01-01 00:00:00")
-
-      ];
-
-      let today = new Date();
-      today.setHours(0, 0, 0, 0);
-      return dates.find(date => (date >= today));
-
-    },
     displayNextMeetingDate: function (date) {
       let dateWrapper = moment(date);
       if (dateWrapper.year() === 3000) {
         return "TBA"
       }
       return dateWrapper.format('dddd Do MMMM') + ' at ' + dateWrapper.format('h:m a');
-    },
+    }
+    ,
     displayDateAndTimeWithRange: function (date) {
       let dateWrapper = moment(date);
       if (dateWrapper.year() === 3000) {

@@ -46,7 +46,8 @@ export default {
     proxy: true
   },
   proxy: {
-    '/members': {target: 'http://localhost:1337', pathRewrite: {'^/members': ''}}
+    '/members': {target: 'http://localhost:1337', pathRewrite: {'^/members': ''}},
+    '/meeting-dates': {target: 'http://localhost:1337', pathRewrite: {'^/meeting-dates': ''}}
   },
   markdownit: {
     preset: 'default',
@@ -55,7 +56,7 @@ export default {
     injected: true
   },
   publicRuntimeConfig: {
-    STRAPI_BASE_URL: process.env.NUXT_ENV_STRAPI_BASE_URL
+    strapiBaseUrl: process.env.STRAPI_BASE_URL || 'http://localhost:1337'
   },
   /*
   ** Build configuration
