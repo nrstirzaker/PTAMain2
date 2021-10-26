@@ -113,6 +113,7 @@ export default {
   fetchOnServer: true,
   async fetch() {
     const baseStrapiURL = this.$config.strapiBaseUrl;
+    console.log('baseStrapiURL: ' + baseStrapiURL)
     const meetingDates = await this.$axios.$get(baseStrapiURL + '/meeting-dates');
     this.meetingDates = meetingDates;
 
