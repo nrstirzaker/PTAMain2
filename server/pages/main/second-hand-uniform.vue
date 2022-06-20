@@ -13,9 +13,6 @@
         </div>
         <div>
           <ul class="font-bold">
-            <li v-for="dates in getAllFuture2ndHandUniformSaleDates()">
-              {{ $moment(dates).format('dddd Do MMMM') + ' at ' + $moment(dates).format('h:m a') }}
-            </li>
           </ul>
         </div>
 
@@ -34,10 +31,14 @@
 
         <div class="flex">
 
-          <div>
-            <img class="h-48 w-48" src="~/assets/images/uniform/Boys-Blazer-400x400.jpg" alt="Boys Blazer"/>
-            <div class="text-center">Boys Blazer</div>
-            <div class="text-center">£10</div>
+          <div v-for="item in getBoysUniforms" :key="item.id">
+            <div>
+              <img class="h-48 w-48" :src="item.Photo.formats.thumbnail.url"/>
+              <div class="text-center">{{ item.Item_Name }}</div>
+              <div class="text-center">
+                {{ item.Price | currency }}
+              </div>
+            </div>
           </div>
 
           <div>
@@ -174,28 +175,33 @@
 </template>
 
 <script>
-export default {
-  name: "second-hand-uniform.vue",
-  methods: {
-    getAllFuture2ndHandUniformSaleDates: function () {
-      const dates = [
-        new Date("2020-09-25 00:00:00"),
-        new Date("2020-10-23 00:00:00"),
-        new Date("2020-11-27 00:00:00"),
-        new Date("2021-01-29 00:00:00"),
-        new Date("2021-02-26 00:00:00"),
-        new Date("2021-03-26 00:00:00"),
-        new Date("2021-04-30 00:00:00"),
-        new Date("2021-06-23 15:15:00"),
-        new Date("2021-07-17 10:00:00"),
-        new Date("2021-07-31 10:00:00")
-      ];
-      let today = new Date();
-      today.setHours(0, 0, 0, 0);
-      return dates.filter(date => (date >= today));
-    },
-    displayFuture2ndHandUniformSaleDates: function (dates) {
+import VueNumeric from 'vue-numeric'
 
+export default {
+
+  name: "second-hand-uniform.vue",
+  fetchOnServer: true,
+  async fetch() {
+
+    const baseStrapiURL = this.$config.strapiBaseUrl;
+    const uniforms = await this.$axios.$get(baseStrapiURL + '/uniforms');
+    this.uniforms = uniforms;
+
+  },
+  data() {
+    return {
+      uniforms: 'TBA'
+    }
+  },
+
+  computed: {
+    getBoysUniforms: function () {
+      let boysUniform = this.uniforms.filter(item => (item.Category === 'Boys'))
+      return boysUniform;
+    },
+    getGirlsUniforms: function () {
+      let girlsUniform = this.uniforms.filter(item => (item.Category === 'Girls'))
+      return girlsUniform;
     }
   }
 }

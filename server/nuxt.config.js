@@ -1,5 +1,4 @@
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -29,10 +28,11 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
+
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/moment',
+    '@nuxtjs/moment'
   ],
   /*
   ** Nuxt.js modules
@@ -40,8 +40,19 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    'vue-currency-filter/nuxt'
   ],
+
+  currencyFilter: { // default name 'currency'
+    symbol: '£',
+    thousandsSeparator: ',',
+    fractionCount: 2,
+    fractionSeparator: '.',
+    symbolPosition: 'front',
+    symbolSpacing: true,
+    avoidEmptyDecimals: undefined,
+  },
   axios: {
     proxy: true
   },
@@ -56,7 +67,7 @@ export default {
     injected: true
   },
   publicRuntimeConfig: {
-    strapiBaseUrl: process.env.STRAPI_BASE_URL || 'http://localhost:1337'
+    strapiBaseUrl: process.env.STRAPI_BASE_URL || 'https://fcc-strapi.herokuapp.com'
   },
   /*
   ** Build configuration

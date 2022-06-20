@@ -110,16 +110,13 @@ export default {
       ]
     }
   },
-  fetchOnServer: true,
+  fetchOnServer: false,
   async fetch() {
+    console.log('fetch')
     const baseStrapiURL = this.$config.strapiBaseUrl;
-    console.log('baseStrapiURL: ' + baseStrapiURL)
-    const meetingDates = await this.$axios.$get(baseStrapiURL + '/meeting-dates');
-    this.meetingDates = meetingDates;
-
-    const uniformSaleDates = await this.$axios.$get(baseStrapiURL + '/uniform-sale-dates');
-    this.uniformSaleDates = uniformSaleDates;
-
+    this.meetingDates = await this.$axios.$get(baseStrapiURL + '/meeting-dates');
+    console.log(this.meetingDates)
+    this.uniformSaleDates = await this.$axios.$get(baseStrapiURL + '/uniform-sale-dates');
 
   },
 
@@ -133,6 +130,9 @@ export default {
         let dateTime = String(record['Date']) + " " + String(record['Time']);
         meetingDatesAndTimes.push(new Date(dateTime));
       }
+      meetingDatesAndTimes.sort(function(a,b){
+        return new Date(a) - new Date(b);
+      });
       let futureTBADate = new Date();
       futureTBADate.setHours(0, 0, 0, 0);
       futureTBADate.setFullYear(3000, 1, 1);
