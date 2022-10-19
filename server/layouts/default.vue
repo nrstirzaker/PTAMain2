@@ -1,15 +1,16 @@
 <template>
 
-  <div class='flex flex-col max-h-full'>
+  <div class='flex flex-col h-screen'>
 
     <Header></Header>
-    <div class="flex flex-row flex-grow">
+    <div class="flex flex-row flex-grow ">
       <SideNavBar></SideNavBar>
       <nuxt/>
     </div>
+    <footer>
     <ContactAndMediaFooter></ContactAndMediaFooter>
     <LegalFooter></LegalFooter>
-
+    </footer>
   </div>
 
 </template>

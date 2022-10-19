@@ -1,78 +1,30 @@
 <template>
   <div class="main flex-1">
-    <div class="mt-5">
+    <div class="mt-5 ">
       <div class="text-tiny">Christ's College / FCC / Home</div>
       <div class="container">
 
         <div class="flex mt-4">
           <p>
             The Friend's of Christ's College, the school's PTA,
-            is a vital part of the school community, who work throughout the year fundraising for
+            is a vital part of the school community, we work throughout the year fundraising for
             the benefit of Christ’s College students.
           </p>
         </div>
 
+        <div class="flex mt-4">
 
-        <div class="flex">
-          <div class="w-1/3">
-            <div class="mt-4">
-              The current committee members are:
-            </div>
+          On the &nbsp <span class="underline"><a href="https://www.christscollege.surrey.sch.uk/298/calendar">School Calendar</a></span>&nbsp you will find the dates of our meetings and the Second Hand Uniform Sales that we run
 
-            <table class="table-fixed">
-              <thead>
-              <tr>
-                <th class="w-1/2">Role</th>
-                <th class="w-1/2">Name</th>
-              </tr>
-              </thead>
-              <tbody>
-
-              <tr v-for="member in members">
-                <td class="border px-4 py-2">{{ member.role }}</td>
-                <td class="border px-4 py-2">{{ member.name }}</td>
-              </tr>
-
-              </tbody>
-            </table>
-          </div>
-          <div class="border border-4 rounded-md border-blue-900 w-5/12 ml-15 mt-20 mb-20 p-4">
-
-            <div class="align-middle">
-
-              <div class="mt-4 text-center font-bold">
-                Calendar
-              </div>
-
-              <div class="mt-4">
-                Next FCC Committee Meeting (At the Jovial Sailor Ripley)
-                <div class="font-bold" v-text="displayNextMeetingDate(pickNextDate(this.meetingDates))"/>
-              </div>
-            </div>
-
-            <div class="mt-4">
-              Next 2nd Hand Uniform Sale ( See
-              <nuxt-link class="outline-none" to="/main/second-hand-uniform">Details</nuxt-link>
-              )
-              <div class="font-bold" v-text="displayDateAndTimeWithRange(pickNextDate(this.uniformSaleDates))"/>
-            </div>
-
-          </div>
         </div>
+
+
       </div>
 
-      <div class="mt-4">
-        In the past few years, we have been able to provide the school with funds for
-        <ul class="ml-6 list-disc">
-          <li>the outdoor table-tennis tables,</li>
-          <li>the school’s new personalised football kits,</li>
-          <li>some language dictionaries</li>
-        </ul>
-        and we are raising funds for an outdoor shelter as requested by the students.
-      </div>
+
 
       <div class="flex mt-4">
-        If you would like to help out as a Committee member or help raise money, please contact us on the email below. There are numerous ways to help!
+        If you would like to help out as a Committee member or just helping at events to raise money, please contact us on the email below. There are numerous ways to help!
       </div>
 
 
@@ -99,24 +51,24 @@ export default {
       meetingDates: 'TBA',
       uniformSaleDates: 'TBA',
       members: [
-        {"index": 1, "role": "Chair", "name": "Nigel Stirzaker"},
-        {"index": 2, "role": "Treasurer", "name": "Sarah Hedger-Howe"},
-        {"index": 3, "role": "Secretary", "name": "Margareth Mayersbeth"},
-        {"index": 4, "role": "2nd Hand Uniform Sales", "name": "Sandra Philips"},
-        {"index": 5, "role": "Member", "name": "Hanna Morris"},
-        {"index": 6, "role": "Member", "name": "Sylvia Owen"},
-        {"index": 7, "role": "Staff Representative", "name": "Stuart Kennedy"},
-        {"index": 8, "role": "Staff Representative", "name": "Zed Annan"},
+        {"visual_order": 1, "role": "Chair", "name": "Nigel Stirzaker"},
+        {"visual_order": 2, "role": "Treasurer", "name": "Sarah Hedger-Howe"},
+        {"visual_order": 3, "role": "Secretary", "name": "Margareth Mayersbeth"},
+        {"visual_order": 4, "role": "2nd Hand Uniform Sales", "name": "Sandra Philips"},
+        {"visual_order": 5, "role": "Member", "name": "Hanna Morris"},
+        {"visual_order": 6, "role": "Member", "name": "Sylvia Owen"},
+        {"visual_order": 7, "role": "Staff Representative", "name": "Stuart Kennedy"},
+        {"visual_order": 8, "role": "Staff Representative", "name": "Zed Annan"},
       ]
     }
   },
   fetchOnServer: false,
   async fetch() {
-    console.log('fetch')
+    console.log('Fetch Called')
     const baseStrapiURL = this.$config.strapiBaseUrl;
-    this.meetingDates = await this.$axios.$get(baseStrapiURL + '/meeting-dates');
-    console.log(this.meetingDates)
+    this.meetingDates = await this.$axios.$get(baseStrapiURL + '/meeting-dates')
     this.uniformSaleDates = await this.$axios.$get(baseStrapiURL + '/uniform-sale-dates');
+    this.members = await this.$axios.$get(baseStrapiURL + '/members');
 
   },
 
